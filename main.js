@@ -93,3 +93,28 @@ switch (color) {
   default:
     console.log("Not a valid color")
 }
+
+/*--------------------------- Functions  ---------------------------*/
+
+function greet(username) {
+  console.log("Namaskar " + username)
+}
+greet()
+greet("Anoop")
+
+function add(a, b) {
+  return a + b
+}
+
+const sum = add(23, 5)
+console.log(sum)
+
+const arrowMul = (a, b) => {
+  return a * b
+}
+const mul = arrowMul(2, 7)
+console.log(mul)
+
+const addFive = (num) => num + 5
+const sumFive = addFive(20)
+console.log(sumFive)
