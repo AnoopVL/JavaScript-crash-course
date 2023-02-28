@@ -37,3 +37,27 @@ console.log(rnumbers.length - 1)
 console.log(rnumbers[rnumbers.length - 1])
 
 /*--------------------------- Operators ---------------------------*/
+let i = 5
+const isEven = i % 2 == 0 ? i + " is even" : i + " is odd"
+console.log(isEven)
+
+/*--------------------------- type conversion ---------------------------*/
+console.log(2 + "3")
+console.log(true + "69")
+console.log(false + 9) // o/p => 9
+console.log(true + 9) // o/p => 10
+console.log(Number("21")) // o/p => 21
+console.log(Number(20)) // o/p => 20
+console.log(parseInt("32")) // o/p => 32
+console.log(String(true))
+console.log(String(2))
+console.log(String("Zeno"))
+console.log((89).toString()) // o/p => 89
+console.log(toString(2)) // o/p => [object Undefined]
+let f = 2
+console.log(f.toString()) // o/p => 2
+console.log(Boolean(null)) // o/p => false
+console.log(Boolean(something)) // o/p => false
+console.log(Boolean(10)) // o/p => true
+console.log(Boolean("10")) // o/p => true
+console.log(Boolean("something")) // o/p => true
