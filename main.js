@@ -61,3 +61,35 @@ console.log(Boolean(something)) // o/p => false
 console.log(Boolean(10)) // o/p => true
 console.log(Boolean("10")) // o/p => true
 console.log(Boolean("something")) // o/p => true
+
+/*--------------------------- Equality ---------------------------*/
+const var1 = 9
+const var2 = "9"
+console.log(var1 == var2)
+console.log(var1 === var2)
+const var3 = null
+const var4 = undefined
+console.log(var3 == var4)
+console.log(var3 === var4)
+
+/*--------------------------- Conditional Statements ---------------------------*/
+const cnum = 9
+if (cnum > 0) {
+  console.log("The numbers is positive")
+} else if (cnum < 0) {
+  console.log("The number is negative")
+} else {
+  console.log("The number is zero")
+}
+
+const color = "yellow"
+switch (color) {
+  case "yellow":
+    console.log("The color is yellow")
+    break
+  case "red":
+    console.log("The color is red")
+    break
+  default:
+    console.log("Not a valid color")
+}
