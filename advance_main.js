@@ -61,3 +61,67 @@ const add3 = add2(9)
 const add5 = add3(7)
 //console.log(add5()) // o/p => NaN
 console.log(add5) // o/p => 18
+
+function sayMyName(name) {
+  console.log("My name is " + name)
+}
+sayMyName("Zeno")
+
+const person = {
+  name: "Kallappa",
+  sayMyName: function () {
+    console.log("My name is " + this.name)
+  },
+}
+//person.sayMyName()
+
+function sayMyName() {
+  console.log("My name is " + this.name)
+}
+sayMyName.call(person)
+
+function Person(name) {
+  this.name = name
+}
+const p1 = new Person("Anoop")
+const p2 = new Person("Zeno")
+
+//console.log(p1.name, p2.name) //o/p => undefined undefined
+
+/*--------------------------- Prototype ---------------------------*/
+function Person(fname, lname) {
+  this.firstName = fname
+  this.LastName = lname
+}
+
+const person1 = new Person("Anoop", "Lanjekar")
+const person2 = new Person("Zeno", "Lanjekar")
+
+person1.getFullName = function () {
+  return this.firstName + " " + this.LastName
+}
+console.log(person1.getFullName())
+// o/p => Anoop Lanjekar
+
+Person.prototype.getFullName = function () {
+  return this.firstName + " " + this.LastName
+}
+console.log(person1.getFullName())
+console.log(person2.getFullName())
+// o/p => Anoop Lanjekar
+//        Zeno Lanjekar
+
+/*--------------------------- Prototype inheritance ---------------------------*/
+function isTheBest(fname, lname) {
+  Person.call(this, fname, lname)
+  this.isTheBest = true
+}
+isTheBest.prototype.isSuccessfull = function () {
+  console.log("Is very successfull !!")
+}
+isTheBest.prototype = Object.create(Person.prototype)
+
+const Anoop = new isTheBest("Anoop", "Lanjekar")
+console.log(Anoop.getFullName())
+
+/*--------------------------- class ---------------------------*/
