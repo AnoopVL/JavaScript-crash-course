@@ -125,3 +125,28 @@ const Anoop = new isTheBest("Anoop", "Lanjekar")
 console.log(Anoop.getFullName())
 
 /*--------------------------- class ---------------------------*/
+class PersonC {
+  constructor(fname, lname) {
+    this.firstName = fname
+    this.LastName = lname
+  }
+  sayMyName() {
+    return this.firstName + " " + this.LastName
+  }
+}
+const classP1 = new PersonC("Anoop", "baba")
+console.log(classP1.sayMyName())
+
+class isTheBestC extends PersonC {
+  constructor(fname, lname) {
+    super(fname, lname)
+    this.isTheBest = true
+  }
+  isSuccessfull() {
+    console.log("Is very successfull !!")
+  }
+}
+const Hrishi = new isTheBestC("Hrishi", "Lanjekar")
+console.log(Hrishi.sayMyName())
+
+/*--------------------------- iterables and iterators ---------------------------*/
