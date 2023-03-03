@@ -174,3 +174,16 @@ for (const word of obj) {
 }
 
 /*--------------------------- Generators ---------------------------*/
+function normalFunction() {
+  console.log("Hemlo")
+  console.log("Worlmd")
+}
+normalFunction()
+function* generatorFunction() {
+  yield "Hemlo"
+  yield "Worlmd"
+}
+const generatorObject = generatorFunction()
+for (const word of generatorObject) {
+  console.log(word)
+}
