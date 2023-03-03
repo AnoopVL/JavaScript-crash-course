@@ -150,3 +150,27 @@ const Hrishi = new isTheBestC("Hrishi", "Lanjekar")
 console.log(Hrishi.sayMyName())
 
 /*--------------------------- iterables and iterators ---------------------------*/
+const obj = {
+  [Symbol.iterator]: function () {
+    let step = 0
+    const iterator = {
+      next: function () {
+        step++
+        if (step === 1) {
+          return { value: "Namaskar", done: false }
+        } else if (step === 2) {
+          return { value: "Saheb", done: false }
+        }
+        {
+          return { value: undefined, done: true }
+        }
+      },
+    }
+    return iterator
+  },
+}
+for (const word of obj) {
+  console.log(word)
+}
+
+/*--------------------------- Generators ---------------------------*/
