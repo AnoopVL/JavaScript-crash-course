@@ -36,3 +36,32 @@ function higherOrderFunction(callback) {
 higherOrderFunction(greet)
 
 /*--------------------------- Promises ---------------------------*/
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Bring Chapati !!")
+  }, 3000)
+  //})
+  //const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject("Make chapati on your own !!")
+  }, 3000)
+})
+const onfulfillment = () => {
+  console.log(resolve)
+  console.log("Set up the table !!")
+}
+const onRejection = () => {
+  console.log(reject)
+  console.log("Start making your own food !")
+}
+promise.then(onfulfillment)
+promise.catch(onRejection)
+
+// const onfulfillment = () => {
+//   console.log(result)
+//   console.log("Set up the table !!")
+// }
+// const onRejection = () => {
+//   console.log(error)
+//   console.log("Start making your own food !")
+// }
